@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rfc9116-check"
+version = "0.1.0"
+description = "Scan domain lists for security.txt and validate files against RFC 9116"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+lint = [
+    "ruff==0.16.3",
+]
+typecheck = [
+    "ty==0.0.81",
+]
+dev = [
+    { include-group = "lint" },
+    { include-group = "typecheck" },
+]
+
+[project.scripts]
+rfc9116-check = "securitytxt_scan.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["securitytxt_scan*"]
+
+[tool.uv]
+add-bounds = "exact"
+exclude-newer = "7 days"
+
+[tool.ty.rules]
+blanket-ignore-comment = "warn"
+division-by-zero = "warn"
+missing-type-argument = "warn"
+possibly-missing-attribute = "warn"
+possibly-missing-import = "warn"
+possibly-unresolved-reference = "warn"
+
+[tool.ty.src]
+exclude = [
+    "tests/",
+]
+
+[tool.ruff.lint]
+# https://docs.astral.sh/ruff/rules/
+select = [
+    "ANN001", # Missing function argument annotations
+    "ANN201", # Missing public return annotations
+    "ARG",    # flake8-unused-arguments
+    "B",      # flake8-bugbear / Subtle bug patterns
+    "D",      # pydocstyle
+    "E",      # pycodestyle errors / Conventional Python style
+    "F",      # Pyflakes / Probable mistakes
+    "I",      # isort / Clean import organization
+    "PIE",    # flake8-pie / Miscellaneous correctness and cleanup
+    "RUF",    # Ruff-specific rules
+    "SIM",    # flake8-simplify / Simpler code
+    "T20",    # flake8-print
+    "TD",     # flake8-todos
+    "UP",     # pyupgrade / Modern Python syntax
+    "W",      # pycodestyle warnings
+]
+ignore = [
+    "E501",  # Line too long
+    "TD003", # Missing issue link for this TODO
+    "D203",  # Use D211: no blank line before class docstrings.
+    "D212",  # Use D213: summary starts after the opening quotes.
+    "SIM905", # Compact string tables are clearer than large list literals.
+]
+
+[tool.ruff.lint.per-file-ignores]
+"securitytxt_scan/cli.py" = ["T20"]
+"securitytxt_scan/display.py" = ["T20"]
+"securitytxt_scan/storage.py" = ["T20"]
+"tests/**/*.py" = ["ANN001", "ANN201", "D"]
+
+[tool.ruff.format]
+docstring-code-format = true

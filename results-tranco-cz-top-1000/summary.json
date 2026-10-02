@@ -1,0 +1,341 @@
+{
+  "classification_counts": {
+    "absent": 659,
+    "blocked": 65,
+    "inconclusive": 22,
+    "invalid": 140,
+    "unreachable": 94,
+    "valid": 20
+  },
+  "dns_failed": 27,
+  "dns_resolved": 973,
+  "field_usage_counts": {
+    "acknowledgement": 1,
+    "acknowledgements": 3,
+    "acknowledgments": 24,
+    "bug-bounty": 1,
+    "canonical": 43,
+    "contact": 153,
+    "csirt": 1,
+    "encryption": 52,
+    "expires": 92,
+    "fingerprint": 1,
+    "hiring": 62,
+    "notice": 1,
+    "openbugbounty": 4,
+    "our-privacy-policy": 1,
+    "policy": 48,
+    "preferred-languages": 117,
+    "signature": 4
+  },
+  "flag_counts": {
+    "absent": 659,
+    "authentication_required": 1,
+    "blocked": 65,
+    "canonical_mismatch": 25,
+    "charset_error": 80,
+    "connection_error": 5,
+    "connection_refused": 3,
+    "contact_missing_mailto": 22,
+    "content_after_pgp_signature": 1,
+    "content_type_not_text_plain": 3,
+    "dns_error": 27,
+    "empty_field_value": 1,
+    "expired": 17,
+    "expiry_error": 84,
+    "extension_fields": 17,
+    "final_url_not_https": 1,
+    "found": 160,
+    "html_fallback": 77,
+    "inconclusive": 22,
+    "insecure_redirect": 3,
+    "insecure_web_uri": 1,
+    "invalid": 140,
+    "invalid_content_encoding": 1,
+    "invalid_expires_rfc3339": 2,
+    "invalid_preferred_languages": 8,
+    "invalid_uri": 8,
+    "invalid_utf8": 3,
+    "long_expiry": 34,
+    "malformed_line": 3,
+    "mime_error": 3,
+    "missing_contact": 4,
+    "missing_expires": 65,
+    "missing_final_line_separator": 29,
+    "missing_utf8_charset": 80,
+    "multiple_preferred_languages": 1,
+    "off_domain_redirect": 9,
+    "pgp_present": 10,
+    "possible_waf": 65,
+    "rate_limited": 3,
+    "registered_extension_fields": 1,
+    "rfc_invalid": 140,
+    "rfc_valid": 20,
+    "server_error": 9,
+    "syntax_error": 5,
+    "timeout": 15,
+    "tls_certificate_error": 39,
+    "tls_error": 5,
+    "too_many_redirects": 2,
+    "unexpected_content": 1,
+    "unknown_fields": 16,
+    "unreachable": 94,
+    "unregistered_well_known_uri": 33,
+    "unsafe_redirect": 2,
+    "uri_error": 59,
+    "valid": 20
+  },
+  "generated_at": "2026-10-02T14:41:00.867912+00:00",
+  "http_responded": 906,
+  "http_status_counts": {
+    "200": 240,
+    "400": 1,
+    "401": 1,
+    "403": 65,
+    "404": 578,
+    "406": 1,
+    "410": 3,
+    "422": 1,
+    "429": 3,
+    "500": 5,
+    "502": 1,
+    "503": 3
+  },
+  "input": "tranco-cz-top-1000.txt",
+  "presence_counts": {
+    "absent": 581,
+    "absent_html": 7,
+    "absent_redirect_html": 70,
+    "absent_unexpected_content": 1,
+    "empty_response": 2,
+    "http_inconclusive": 81,
+    "inconclusive": 98,
+    "present": 160
+  },
+  "rates_percent": {
+    "dns_resolved_of_total": 97.3,
+    "present_of_dns_resolved": 16.44,
+    "present_of_total": 16.0,
+    "valid_of_present": 12.5,
+    "valid_of_total": 2.0
+  },
+  "requested_path": "/.well-known/security.txt",
+  "rfc9116_invalid_present": 140,
+  "rfc9116_valid": 20,
+  "scanner_version": "0.1.0",
+  "security_txt_absent": 659,
+  "security_txt_fields_registry": {
+    "snapshot_date": "2026-03-07",
+    "source": "https://www.iana.org/assignments/security-txt-fields"
+  },
+  "security_txt_present": 160,
+  "settings": {
+    "delay_between_request_starts_seconds": 0.2,
+    "max_body_bytes": 262144,
+    "max_redirects": 5,
+    "timeout_seconds": 5.0,
+    "user_agent": "rfc9116-check/0.1.0 (personal research)",
+    "workers": 1
+  },
+  "total_domains": 1000,
+  "transport_error_counts": {
+    "connection_error": 5,
+    "connection_refused": 3,
+    "dns_error": 27,
+    "timeout": 15,
+    "tls_certificate_error": 39,
+    "tls_error": 5,
+    "too_many_redirects": 2,
+    "unsafe_redirect": 2
+  },
+  "validation_error_counts": {
+    "contact_missing_mailto": 26,
+    "content_after_pgp_signature": 1,
+    "content_type_not_text_plain": 3,
+    "empty_field_value": 3,
+    "expired": 17,
+    "final_url_not_https": 1,
+    "insecure_redirect": 3,
+    "insecure_web_uri": 1,
+    "invalid_expires_rfc3339": 2,
+    "invalid_preferred_languages": 8,
+    "invalid_uri": 13,
+    "invalid_utf8": 3,
+    "malformed_line": 3,
+    "missing_contact": 4,
+    "missing_expires": 65,
+    "missing_final_line_separator": 29,
+    "missing_utf8_charset": 80,
+    "multiple_preferred_languages": 1,
+    "unregistered_well_known_uri": 52
+  },
+  "validation_findings": [
+    {
+      "code": "charset_error",
+      "domains": 80,
+      "label": "Charset header",
+      "percent_of_found": 50.0,
+      "severity": "error"
+    },
+    {
+      "code": "missing_expires",
+      "domains": 65,
+      "label": "No expiry",
+      "percent_of_found": 40.62,
+      "severity": "error"
+    },
+    {
+      "code": "long_expiry",
+      "domains": 34,
+      "label": "Expiry over one year",
+      "percent_of_found": 21.25,
+      "severity": "warning"
+    },
+    {
+      "code": "unregistered_well_known_uri",
+      "domains": 33,
+      "label": "Unregistered well-known URI",
+      "percent_of_found": 20.62,
+      "severity": "error"
+    },
+    {
+      "code": "missing_final_line_separator",
+      "domains": 29,
+      "label": "No final newline",
+      "percent_of_found": 18.12,
+      "severity": "error"
+    },
+    {
+      "code": "canonical_mismatch",
+      "domains": 25,
+      "label": "Canonical mismatch",
+      "percent_of_found": 15.62,
+      "severity": "warning"
+    },
+    {
+      "code": "contact_missing_mailto",
+      "domains": 22,
+      "label": "Contact missing mailto",
+      "percent_of_found": 13.75,
+      "severity": "error"
+    },
+    {
+      "code": "expired",
+      "domains": 17,
+      "label": "Expired",
+      "percent_of_found": 10.62,
+      "severity": "error"
+    },
+    {
+      "code": "pgp_present",
+      "domains": 10,
+      "label": "PGP signature present",
+      "percent_of_found": 6.25,
+      "severity": "info"
+    },
+    {
+      "code": "off_domain_redirect",
+      "domains": 9,
+      "label": "Off-domain redirect",
+      "percent_of_found": 5.62,
+      "severity": "warning"
+    },
+    {
+      "code": "invalid_preferred_languages",
+      "domains": 8,
+      "label": "Invalid language tag",
+      "percent_of_found": 5.0,
+      "severity": "error"
+    },
+    {
+      "code": "invalid_uri",
+      "domains": 8,
+      "label": "URI",
+      "percent_of_found": 5.0,
+      "severity": "error"
+    },
+    {
+      "code": "syntax_error",
+      "domains": 5,
+      "label": "Syntax",
+      "percent_of_found": 3.12,
+      "severity": "error"
+    },
+    {
+      "code": "missing_contact",
+      "domains": 4,
+      "label": "No contact",
+      "percent_of_found": 2.5,
+      "severity": "error"
+    },
+    {
+      "code": "insecure_redirect",
+      "domains": 3,
+      "label": "HTTP redirect",
+      "percent_of_found": 1.88,
+      "severity": "error"
+    },
+    {
+      "code": "mime_error",
+      "domains": 3,
+      "label": "MIME type",
+      "percent_of_found": 1.88,
+      "severity": "error"
+    },
+    {
+      "code": "invalid_utf8",
+      "domains": 3,
+      "label": "UTF-8",
+      "percent_of_found": 1.88,
+      "severity": "error"
+    },
+    {
+      "code": "invalid_expires_rfc3339",
+      "domains": 2,
+      "label": "Expiry format",
+      "percent_of_found": 1.25,
+      "severity": "error"
+    },
+    {
+      "code": "multiple_preferred_languages",
+      "domains": 1,
+      "label": "Duplicate languages",
+      "percent_of_found": 0.62,
+      "severity": "error"
+    },
+    {
+      "code": "final_url_not_https",
+      "domains": 1,
+      "label": "HTTPS",
+      "percent_of_found": 0.62,
+      "severity": "error"
+    },
+    {
+      "code": "insecure_web_uri",
+      "domains": 1,
+      "label": "Insecure URI",
+      "percent_of_found": 0.62,
+      "severity": "error"
+    },
+    {
+      "code": "invalid_content_encoding",
+      "domains": 1,
+      "label": "Invalid content encoding",
+      "percent_of_found": 0.62,
+      "severity": "warning"
+    }
+  ],
+  "validation_info_counts": {
+    "pgp_present": 10
+  },
+  "validation_warning_counts": {
+    "canonical_does_not_match_retrieval_url": 25,
+    "expires_more_than_one_year_ahead": 34,
+    "invalid_content_encoding": 1,
+    "redirected_off_domain": 9
+  },
+  "well_known_uri_registry": {
+    "snapshot_date": "2026-09-16",
+    "source": "https://www.iana.org/assignments/well-known-uris"
+  }
+}

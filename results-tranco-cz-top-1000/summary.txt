@@ -1,0 +1,36 @@
+Summary
+  Domains:             1000
+  DNS resolved:        973/1000 (97.30%)
+  security.txt found:  160/1000 (16.00%)
+  RFC 9116 valid:      20/160 found (12.50%)
+  RFC 9116 invalid:    140/160 found (87.50%)
+  Absent / fallback:   659/1000 (65.90%)
+  Blocked (HTTP 403):  65/1000 (6.50%)
+  Unreachable:         94/1000 (9.40%)
+  Other inconclusive:  22/1000 (2.20%)
+
+Validation findings (160 found files)
+  Finding                      Kind     Domains   % found
+  -------------------------------------------------------
+  Charset header               error         80    50.00%
+  No expiry                    error         65    40.62%
+  Expiry over one year         warning       34    21.25%
+  Unregistered well-known URI  error         33    20.62%
+  No final newline             error         29    18.12%
+  Canonical mismatch           warning       25    15.62%
+  Contact missing mailto       error         22    13.75%
+  Expired                      error         17    10.62%
+  PGP signature present        info          10     6.25%
+  Off-domain redirect          warning        9     5.62%
+  Invalid language tag         error          8     5.00%
+  URI                          error          8     5.00%
+  Syntax                       error          5     3.12%
+  No contact                   error          4     2.50%
+  HTTP redirect                error          3     1.88%
+  MIME type                    error          3     1.88%
+  UTF-8                        error          3     1.88%
+  Expiry format                error          2     1.25%
+  Duplicate languages          error          1     0.62%
+  HTTPS                        error          1     0.62%
+  Insecure URI                 error          1     0.62%
+  Invalid content encoding     warning        1     0.62%
