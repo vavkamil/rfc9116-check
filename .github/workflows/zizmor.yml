@@ -2,9 +2,15 @@ name: Security - zizmor
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   zizmor:
